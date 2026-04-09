@@ -277,6 +277,17 @@ function App() {
                   </div>
 
                   <div className={sharedCardClass}>
+                    <h3 className="text-2xl font-semibold mb-3">Personal Portfolio Website</h3>
+                    <p className="text-gray-400 mb-4">
+                      Designed and developed my personal portfolio using React and Tailwind CSS to
+                      showcase projects, achievements, and technical skills.
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      Tech Stack: React, Tailwind CSS, Framer Motion
+                    </p>
+                  </div>
+
+                  <div className={sharedCardClass}>
                     <h3 className="text-2xl font-semibold mb-3">SmartRoute AI</h3>
                     <p className="text-gray-400 mb-4">
                       Intelligent ride optimization system using heuristic-based approaches to minimize
@@ -301,14 +312,6 @@ function App() {
                   </div>
 
                   <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">AWS Static Website Hosting (S3 & EC2)</h3>
-                    <p className="text-gray-400 mb-4">
-                      Deployed a static website using AWS S3 and integrated with EC2, configuring
-                      buckets, permissions, and CLI-based deployment for scalable hosting.
-                    </p>
-                  </div>
-
-                  <div className={sharedCardClass}>
                     <h3 className="text-2xl font-semibold mb-3">FlashPop – AI Study Companion</h3>
                     <p className="text-gray-400 mb-4">
                       AI tool that generates smart flashcards automatically from study material.
@@ -316,15 +319,13 @@ function App() {
                   </div>
 
                   <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">Personal Portfolio Website</h3>
+                    <h3 className="text-2xl font-semibold mb-3">AWS Static Website Hosting (S3 & EC2)</h3>
                     <p className="text-gray-400 mb-4">
-                      Designed and developed my personal portfolio using React and Tailwind CSS to
-                      showcase projects, achievements, and technical skills.
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      Tech Stack: React, Tailwind CSS, Framer Motion
+                      Deployed a static website using AWS S3 and integrated with EC2, configuring
+                      buckets, permissions, and CLI-based deployment for scalable hosting.
                     </p>
                   </div>
+                  
                 </div>
               </div>
             </motion.section>
@@ -340,7 +341,7 @@ function App() {
               transition={{ duration: 0.6 }}
               className="page-section"
             >
-              <div className="max-w-6xl w-full px-8 z-10">
+              <div className="max-w-6xl w-full px-8 z-10 pb-24">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Achievements</h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
