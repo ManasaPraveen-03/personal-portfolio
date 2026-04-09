@@ -13,6 +13,8 @@ import { loadFull } from "tsparticles";
 import "./App.css";
 
 function App() {
+  const [projectSlide, setProjectSlide] = useState(0);
+  
   const [currentPage, setCurrentPage] = useState(0);
 
   const pages = ["Home", "About", "Skills", "Projects", "Achievements", "Contact"];
@@ -251,81 +253,105 @@ function App() {
           )}
 
           {currentPage === 3 && (
-            <motion.section
-              key="projects"
-              variants={pageVariants}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              transition={{ duration: 0.6 }}
-              className="page-section"
-            >
-              <div className="max-w-6xl w-full px-8 z-10 pb-24">
-                <h2 className="text-4xl font-bold mb-12 text-center text-white">Projects</h2>
+  <motion.section
+    key="projects"
+    variants={pageVariants}
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    transition={{ duration: 0.6 }}
+    className="page-section"
+  >
+    <div className="max-w-6xl w-full px-8 z-10">
+      <h2 className="text-4xl font-bold mb-10 text-center text-white">
+        Projects
+      </h2>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-                  <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">UniConnect</h3>
-                    <p className="text-gray-400 mb-4">
-                      University event management platform built with modern web technologies.
-                    </p>
-                  </div>
+      {/* SLIDE NAV */}
+      <div className="flex justify-between items-center mb-6">
+        <button
+          onClick={() => setProjectSlide((prev) => Math.max(prev - 1, 0))}
+          className="text-white text-2xl opacity-70 hover:opacity-100"
+        >
+          ⬅️
+        </button>
 
-                  <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">Personal Portfolio Website</h3>
-                    <p className="text-gray-400 mb-4">
-                      Designed and developed my personal portfolio using React and Tailwind CSS to
-                      showcase projects, achievements, and technical skills.
-                    </p>
-                    <p className="text-sm text-gray-500">
-                      Tech Stack: React, Tailwind CSS, Framer Motion
-                    </p>
-                  </div>
+        <p className="text-gray-400 text-sm">
+          {projectSlide + 1} / 2
+        </p>
 
-                  <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">SmartRoute AI</h3>
-                    <p className="text-gray-400 mb-4">
-                      Intelligent ride optimization system using heuristic-based approaches to minimize
-                      travel time, cost, and cancellation risk.
-                    </p>
-                  </div>
+        <button
+          onClick={() => setProjectSlide((prev) => Math.min(prev + 1, 1))}
+          className="text-white text-2xl opacity-70 hover:opacity-100"
+        >
+          ➡️
+        </button>
+      </div>
 
-                  <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">Gestify – AI Sign Language Translator</h3>
-                    <p className="text-gray-400 mb-4">
-                      AI-based real-time sign language recognition system using computer vision to
-                      interpret gestures and convert them into readable text.
-                    </p>
-                  </div>
+      {/* SLIDES */}
+      {projectSlide === 0 && (
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className={sharedCardClass}>
+            <h3 className="text-2xl font-semibold mb-3">UniConnect</h3>
+            <p className="text-gray-400">
+              University event management platform built with modern web technologies.
+            </p>
+          </div>
 
-                  <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">
-                      Ride-Hailing Cancellation Prediction (NUS Research Internship)
-                    </h3>
-                    <p className="text-gray-400 mb-4">
-                      Built predictive models using XGBoost and Transformer techniques on a Kaggle
-                      dataset to analyze and forecast ride cancellations with improved accuracy.
-                    </p>
-                  </div>
+          <div className={sharedCardClass}>
+            <h3 className="text-2xl font-semibold mb-3">Personal Portfolio Website</h3>
+            <p className="text-gray-400">
+              Built using React and Tailwind CSS with animations and modern UI.
+            </p>
+          </div>
 
-                  <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">FlashPop – AI Study Companion</h3>
-                    <p className="text-gray-400 mb-4">
-                      AI tool that generates smart flashcards automatically from study material.
-                    </p>
-                  </div>
+          <div className={sharedCardClass}>
+            <h3 className="text-2xl font-semibold mb-3">SmartRoute AI</h3>
+            <p className="text-gray-400">
+              AI-based ride optimization system minimizing time, cost, and cancellation risk.
+            </p>
+          </div>
 
-                  <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">AWS Static Website Hosting (S3 & EC2)</h3>
-                    <p className="text-gray-400 mb-4">
-                      Deployed a static website using AWS S3 and integrated with EC2, configuring
-                      buckets, permissions, and CLI-based deployment for scalable hosting.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.section>
-          )}
+          <div className={sharedCardClass}>
+            <h3 className="text-2xl font-semibold mb-3">Gestify</h3>
+            <p className="text-gray-400">
+              Real-time sign language translator using computer vision.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {projectSlide === 1 && (
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className={sharedCardClass}>
+            <h3 className="text-2xl font-semibold mb-3">
+              Ride Cancellation Prediction (NUS)
+            </h3>
+            <p className="text-gray-400">
+              Built ML models using XGBoost and Transformers for prediction.
+            </p>
+          </div>
+
+          <div className={sharedCardClass}>
+            <h3 className="text-2xl font-semibold mb-3">FlashPop</h3>
+            <p className="text-gray-400">
+              AI-powered flashcard generator for smart revision.
+            </p>
+          </div>
+
+          <div className={sharedCardClass}>
+            <h3 className="text-2xl font-semibold mb-3">
+              AWS Hosting Project
+            </h3>
+            <p className="text-gray-400">
+              Deployed static website using S3 and EC2 with CLI setup.
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  </motion.section>
+)}
 
           {currentPage === 4 && (
             <motion.section
