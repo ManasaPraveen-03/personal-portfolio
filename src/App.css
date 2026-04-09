@@ -16,22 +16,41 @@ body,
   overflow: hidden;
   color: white;
 }
+
 .page-wrapper {
   position: relative;
   z-index: 10;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.default-wrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: 120px 20px 60px;
+  overflow: hidden;
+}
+
+.projects-wrapper {
+  display: block;
   overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 120px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
 }
 
 .page-section {
   width: 100%;
-  min-height: auto;
+  min-height: 100vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-wrapper .page-section {
+  min-height: auto;
   align-items: flex-start;
   justify-content: center;
 }

@@ -44,7 +44,6 @@ function App() {
 
   return (
     <div className="app-shell">
-      {/* PARTICLES */}
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -67,7 +66,6 @@ function App() {
         }}
       />
 
-      {/* GLOW BALLS */}
       <div className="glow-ball glow-purple one"></div>
       <div className="glow-ball glow-blue two"></div>
       <div className="glow-ball glow-cyan three"></div>
@@ -77,7 +75,6 @@ function App() {
       <div className="glow-ball glow-blue seven"></div>
       <div className="glow-ball glow-cyan eight"></div>
 
-      {/* TOP NAVBAR */}
       <div className="fixed top-6 left-1/2 -translate-x-1/2 z-30 w-fit">
         <div className="backdrop-blur-md bg-white/10 border border-white/20 px-8 py-3 rounded-full flex gap-6 text-sm shadow-[0_0_20px_rgba(34,211,238,0.08)]">
           {pages.map((page, index) => (
@@ -94,7 +91,6 @@ function App() {
         </div>
       </div>
 
-      {/* LEFT / RIGHT ARROWS */}
       <button
         onClick={prevPage}
         disabled={currentPage === 0}
@@ -115,8 +111,7 @@ function App() {
         <FaChevronRight />
       </button>
 
-      {/* PAGE CONTENT */}
-      <div className="page-wrapper">
+      <div className={`page-wrapper ${currentPage === 3 ? "projects-wrapper" : "default-wrapper"}`}>
         <AnimatePresence mode="wait">
           {currentPage === 0 && (
             <motion.section
@@ -265,7 +260,7 @@ function App() {
               transition={{ duration: 0.6 }}
               className="page-section"
             >
-              <div className="max-w-6xl w-full px-8 z-10">
+              <div className="max-w-6xl w-full px-8 z-10 pb-24">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Projects</h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -304,7 +299,9 @@ function App() {
                   </div>
 
                   <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">Ride-Hailing Cancellation Prediction (NUS Research Internship)</h3>
+                    <h3 className="text-2xl font-semibold mb-3">
+                      Ride-Hailing Cancellation Prediction (NUS Research Internship)
+                    </h3>
                     <p className="text-gray-400 mb-4">
                       Built predictive models using XGBoost and Transformer techniques on a Kaggle
                       dataset to analyze and forecast ride cancellations with improved accuracy.
@@ -325,7 +322,6 @@ function App() {
                       buckets, permissions, and CLI-based deployment for scalable hosting.
                     </p>
                   </div>
-                  
                 </div>
               </div>
             </motion.section>
@@ -341,7 +337,7 @@ function App() {
               transition={{ duration: 0.6 }}
               className="page-section"
             >
-              <div className="max-w-6xl w-full px-8 z-10 pb-24">
+              <div className="max-w-6xl w-full px-8 z-10">
                 <h2 className="text-4xl font-bold mb-12 text-center text-white">Achievements</h2>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
