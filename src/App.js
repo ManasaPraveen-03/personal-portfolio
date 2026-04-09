@@ -277,9 +277,34 @@ function App() {
                   </div>
 
                   <div className={sharedCardClass}>
-                    <h3 className="text-2xl font-semibold mb-3">Number Guessing Game</h3>
+                    <h3 className="text-2xl font-semibold mb-3">SmartRoute AI</h3>
                     <p className="text-gray-400 mb-4">
-                      Interactive JavaScript game where users guess a randomly generated number.
+                      Intelligent ride optimization system using heuristic-based approaches to minimize
+                      travel time, cost, and cancellation risk.
+                    </p>
+                  </div>
+
+                  <div className={sharedCardClass}>
+                    <h3 className="text-2xl font-semibold mb-3">Gestify – AI Sign Language Translator</h3>
+                    <p className="text-gray-400 mb-4">
+                      AI-based real-time sign language recognition system using computer vision to
+                      interpret gestures and convert them into readable text.
+                    </p>
+                  </div>
+
+                  <div className={sharedCardClass}>
+                    <h3 className="text-2xl font-semibold mb-3">Ride-Hailing Cancellation Prediction (NUS Research Internship)</h3>
+                    <p className="text-gray-400 mb-4">
+                      Built predictive models using XGBoost and Transformer techniques on a Kaggle
+                      dataset to analyze and forecast ride cancellations with improved accuracy.
+                    </p>
+                  </div>
+
+                  <div className={sharedCardClass}>
+                    <h3 className="text-2xl font-semibold mb-3">AWS Static Website Hosting (S3 & EC2)</h3>
+                    <p className="text-gray-400 mb-4">
+                      Deployed a static website using AWS S3 and integrated with EC2, configuring
+                      buckets, permissions, and CLI-based deployment for scalable hosting.
                     </p>
                   </div>
 
