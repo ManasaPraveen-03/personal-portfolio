@@ -172,7 +172,7 @@ function App() {
 
                 <div className="flex justify-center">
                   <a
-                    href="https://drive.google.com/file/d/1LVanUqjIcozeMUMQ9cRpwXaGj2PEBt18/view?usp=sharing"
+                    href="https://drive.google.com/file/d/159bi8qSXb9IoKJ0VslhONKLbcpEBR42_/view?usp=sharing"
                     target="_blank"
                     rel="noreferrer"
                     className="bg-cyan-500 text-black px-6 py-2 rounded-lg hover:bg-cyan-400 transition font-medium"
@@ -200,7 +200,7 @@ function App() {
                 <p className="text-gray-300 text-lg leading-relaxed">
                   I&apos;m Manasa Praveen, a B.Tech student passionate about technology,
                   creativity, and building impactful solutions. I maintain a strong
-                  academic record with a CGPA of 9.81 and actively explore software
+                  academic record with a CGPA of 9.85 and actively explore software
                   development, data-driven technologies, and innovative digital ideas.
                 </p>
 
@@ -370,7 +370,7 @@ function App() {
                   <div className={sharedCardClass}>
                     <h3 className="text-2xl font-semibold mb-2">Academic Excellence</h3>
                     <p className="text-gray-400 text-sm">
-                      Maintaining a CGPA of <span className="text-white font-semibold">9.81</span> and
+                      Maintaining a CGPA of <span className="text-white font-semibold">9.85</span> and
                       consistently performing among the top students in my B.Tech program.
                     </p>
                   </div>
@@ -462,18 +462,6 @@ function App() {
                       className="text-cyan-400 hover:underline"
                     >
                       github.com/ManasaPraveen-03
-                    </a>
-                  </p>
-
-                  <p>
-                    <span className="text-gray-400">Instagram:</span>{" "}
-                    <a
-                      href="https://www.instagram.com/_manasapraveen_/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-cyan-400 hover:underline"
-                    >
-                      @_manasapraveen_
                     </a>
                   </p>
                 </div>
